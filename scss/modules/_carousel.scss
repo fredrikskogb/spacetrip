@@ -1,0 +1,63 @@
+// Bootstrap carousel overwrite
+.active {
+    padding: 0!important;
+}
+
+#myCarousel {
+    padding: 0!important;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    padding: 0!important;
+}
+
+.carousel-control.left {
+    background-image: none!important;
+}
+
+.carousel-control.right {
+    background-image: none!important;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    height: 100%!important;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 70% 50%;
+       object-position: 70% 50%;
+}
+
+.carousel-caption h3 {
+    margin-top: 1em;
+    font-size: 2em;
+}
+
+.carousel-caption p {
+    font-size: 1.5em;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    margin: auto;
+}
+
+@include tablet {
+
+    #myCarousel {
+        margin-right: 3em;
+        width: 70vw;
+    }
+
+}
+
+@include desktop {
+
+    #myCarousel {
+        margin-right: 3em;
+        width: 75vw;
+    }
+
+}

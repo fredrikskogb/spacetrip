@@ -1,0 +1,150 @@
+#booking {
+    background-image: url("../images/john-fowler-461285-unsplash.jpg");
+    @include backgroundImageStyling;
+
+    div {
+        padding: 1rem;
+
+        input {
+            color: black;
+        }
+
+        .formMobile {
+            background-color: $bgColorOpacity;
+            -webkit-box-shadow: 0px 0px 15px 15px $bgColorOpacity;
+                    box-shadow: 0px 0px 15px 15px $bgColorOpacity;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            width: 75%;
+            margin: 3em auto 0 auto;
+            position: relative;
+
+            label {
+                margin-top: 0.5em;
+            }
+
+            input{
+                margin-top: 0.5em;
+            }
+
+            input[type=submit] {
+                @include buttonStyling;
+                width: 50%;
+                margin: 1em auto 0 auto;
+            }
+
+        }
+
+        .formDesktop {
+            display: none;
+        }
+    }
+}
+
+@include tablet {
+
+    #booking div {
+
+        .formMobile {
+            display: none;
+        }
+
+        .formDesktop {
+            background-color: $bgColorOpacity;
+            -webkit-box-shadow: 0px 0px 15px 15px $bgColorOpacity;
+                    box-shadow: 0px 0px 15px 15px $bgColorOpacity;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            width: 50vw;
+            margin: 3em auto 0 auto;
+            padding: 2em 1em 2em 1em;
+
+            .formDesktopLeft {
+                position: relative;
+                left: 0;
+                width: 50%;
+
+                div {
+                    padding: 0;
+                }
+
+                label {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                input:not([type=radio]) {
+                    width: 150px;
+                    margin: 0;
+                    margin-bottom: 10px;
+                }
+
+                input[type=radio]{
+                    margin: 0;
+                }
+
+                .radio {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    padding: 0;
+                    width: 100%;
+
+                    label{
+                        margin-left: 1em;
+                    }
+                }
+
+            }
+
+            .formDesktopRight {
+                width: 50%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+
+                input, label {
+                    width: 150px;
+                    margin-left: auto;
+                }
+
+                input{
+                    margin-bottom: 10px;
+                }
+            }
+
+            input[type=submit] {
+                @include buttonStyling;
+                margin-top: 1.5em;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
+            }
+        }
+    }
+
+}
+
+@include desktop {
+
+    #booking div {
+
+        .formDesktop {
+            padding: 1em 4em 1em 4em;
+        }
+
+    }
+    
+}

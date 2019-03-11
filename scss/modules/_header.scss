@@ -1,0 +1,80 @@
+nav {
+    
+    position: fixed;
+    top: 3.2em;
+    right: 0;
+    // Put navbar in front of carousel.
+    z-index: 10;
+
+    .bars {
+        height: 2em;
+        position: fixed;
+        top: 1em;
+        right: 1em;
+    }
+
+    ul {
+
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 3px;
+        font-size: 2em;
+        text-decoration: underline;
+        padding: 0.5rem;
+        display: none;
+
+        a {
+            color: black;
+        
+            &:hover, &:focus {
+                color: white;
+            }
+        }
+
+    } /* ul END */
+
+} /* nav END */
+
+@include tablet {
+    
+    nav {
+        
+        @include verticalAlign;
+        display: table;
+
+        .bars {
+            display: none;
+        }
+
+        ul {
+            display: inline-block;
+            background-color: transparent;
+
+            li{
+                margin: 1.5em 0em 1.5em 0em;
+            }
+
+            a {
+                color: white;
+
+                &:hover {
+                    font-size: $hoverSize;
+                }
+
+            }
+        }
+
+    } /* nav END */
+
+} /* desktop END */
+
+@include desktop {
+    nav {
+
+        ul {
+
+            li{
+                margin: 1.5em;
+            }
+        }
+    }
+}

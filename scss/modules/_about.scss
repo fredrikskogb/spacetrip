@@ -1,0 +1,37 @@
+#about {
+    
+    background-image: url("../images/spacex-71874-unsplash.jpg");
+    @include backgroundImageStyling;
+    position: relative;
+
+    div {
+        
+        padding: 1rem;
+        background-color: $bgColorOpacityMaxOpacity;
+        -webkit-box-shadow: 0px 30px 30px 10px $bgColorOpacityMaxOpacity;
+                box-shadow: 0px 30px 30px 10px $bgColorOpacityMaxOpacity;
+
+        .aboutParagraph {
+            width: 75%;
+            text-align: center;
+            margin: 0 auto;
+            padding: 1em 0em 0em 0em;
+
+            @include tablet {
+                width: 700px;
+            }
+        }
+
+    }
+
+    #aboutArrow {
+        display: none;
+    }
+
+    @include desktop {
+        #aboutArrow {
+            @include arrowStyling;
+        }
+    }
+
+}

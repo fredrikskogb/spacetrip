@@ -1,0 +1,61 @@
+@mixin tablet {
+
+    @media screen and (min-width: 768px){
+        @content;
+    }
+
+}
+
+@mixin desktop {
+
+    @media screen and (min-width: 1024px){
+        @content;
+    }
+
+}
+
+@mixin verticalAlign {
+
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+}
+
+@mixin buttonStyling {
+    background-color: transparent;
+    color: $submitColor;
+    border: 1px solid white;
+    text-decoration: underline;
+    padding: 0.5em;
+
+    &:hover {
+        background: $bgColor;
+    }
+}
+
+@mixin backgroundImageStyling {
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@mixin arrowStyling {
+    display: block;
+    height: 3em;
+    color: white;
+	position: absolute;
+	left: 0;
+  	right: 0;
+    bottom: 1em;
+    margin: 0 auto;
+	scroll-behavior: smooth;
+
+    &:hover {
+        font-size: $hoverSize;
+    }
+}
